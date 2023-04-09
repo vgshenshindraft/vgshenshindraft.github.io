@@ -1,0 +1,35 @@
+.price {
+    padding-top: 60px;
+    &__wrapper {
+        margin-top: 60px;
+        padding: 0 60px;
+        display: grid;
+        grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
+        grid-auto-rows: minmax(45px, auto);
+        justify-content: space-between;
+        row-gap: 15px;
+    }
+    &__item {
+        display: grid;
+        position: relative;
+        grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
+        grid-auto-rows: minmax(21px, auto);
+        row-gap: 5px;
+        padding-left: 25px;
+        &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $main-color;
+            position: absolute;
+            top: 3px;
+        }
+    }
+    &__value {
+        justify-self: end;
+    }
+    &__descr {
+        grid-column: 1 / 3;
+    }
+}

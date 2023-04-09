@@ -1,0 +1,82 @@
+.resume {
+    padding-top: 120px;
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 440px);
+        column-gap: 121px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 0;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 50%;
+            }
+        }
+        ul {
+            list-style-type: none;
+            margin-bottom: 0;
+            li {
+                position: relative;
+                padding-left: 50px;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 8px);
+                    position: absolute;
+                    top: -8px;
+                    left: 7px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 42px;
+            position: absolute;
+            top: 65px;
+            left: -42px;
+            background-color: #000;
+        }
+        &-head {
+            padding: 45px 0 0 65px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-icon {
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            @include before_circle;
+            &:before {
+                left: -15px;
+                top: -50%;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+}
